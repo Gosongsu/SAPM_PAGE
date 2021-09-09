@@ -42,6 +42,9 @@ app.get('/write', function(req, res){
     res.render('write.ejs')
   });
 
+app.get('/pet', function(req, res){
+    res.send('펫 용품 사세요')
+})
 
 
 
