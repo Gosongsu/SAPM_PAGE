@@ -13,7 +13,7 @@ app.use('/public', express.static('public'));
 
 var db;
 
-MongoClient.connect('mongodb+srv://admin:qwer1234@cluster0.6slr0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', function(error, client){
+MongoClient.connect(config.mongoURI, function(error, client){
     if (error) return console.log(error)
     db = client.db('todoapp');
 
